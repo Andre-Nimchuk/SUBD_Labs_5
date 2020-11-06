@@ -1,20 +1,20 @@
 USE [LB_1]
 GO
 
-SELECT * INTO Авто_рік
-FROM Авто WHERE Рік_випуску<=2000;
+SELECT * INTO РђРІС‚Рѕ_СЂС–Рє
+FROM РђРІС‚Рѕ WHERE Р С–Рє_РІРёРїСѓСЃРєСѓ<=2000;
 
-SELECT * INTO Авто_рік2
-FROM Авто WHERE Рік_випуску<=2000;
+SELECT * INTO РђРІС‚Рѕ_СЂС–Рє2
+FROM РђРІС‚Рѕ WHERE Р С–Рє_РІРёРїСѓСЃРєСѓ<=2000;
 
-SELECT * FROM Авто_рік
+SELECT * FROM РђРІС‚Рѕ_СЂС–Рє
 UNION
-SELECT * FROM Авто_рік2
+SELECT * FROM РђРІС‚Рѕ_СЂС–Рє2
 
-SELECT * FROM Авто_рік
-WHERE Код_авто  IN (SELECT Код_авто FROM Авто_рік2) 
+SELECT * FROM РђРІС‚Рѕ_СЂС–Рє
+WHERE РљРѕРґ_Р°РІС‚Рѕ  IN (SELECT РљРѕРґ_Р°РІС‚Рѕ FROM РђРІС‚Рѕ_СЂС–Рє2) 
 
-SELECT * FROM Авто_рік2
-WHERE Код_авто NOT IN (SELECT Код_авто FROM Авто_рік)
+SELECT * FROM РђРІС‚Рѕ_СЂС–Рє2
+WHERE РљРѕРґ_Р°РІС‚Рѕ NOT IN (SELECT РљРѕРґ_Р°РІС‚Рѕ FROM РђРІС‚Рѕ_СЂС–Рє)
 
-SELECT * FROM Авто_рік, Авто_рік2;
+SELECT * FROM РђРІС‚Рѕ_СЂС–Рє, РђРІС‚Рѕ_СЂС–Рє2;
